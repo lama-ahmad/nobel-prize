@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<!-- <meta name="viewport" content="width=device-width"> -->
+		<title>Gender Distribution of Nobel Prize Winners</title> 
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
+	</head>
+	<body>
+        <!-- CONTENT GOES HERE -->
+        <h1>Gender Distribution of Nobel Prize Winners</h1>
+        <p class="instructions">Select a Nobel Prize category to find out the gender distribution of winners in that category. Then click on the medals to learn more about the winners.</p>
+        <div id="categories">
+            <button class="btn btn-2 btn-2a" value=0>Economics</button>
+            <button class="btn btn-2 btn-2a" value=1>Peace</button>
+            <button class="btn btn-2 btn-2a" value=2>Chemistry</button>
+            <button class="btn btn-2 btn-2a" value=3>Medicine</button>
+            <button class="btn btn-2 btn-2a" value=4>Literature</button>
+            <button class="btn btn-2 btn-2a" value=5>Physics</button>
+        </div>
+        <section class="container">
+                <div id="winner-info"></div>
+                <div id="my-canvas"></div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="p5.js"></script>
+        <script src="p5.dom.js"></script>
+        <script type="text/javascript" src="nobel_winners.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
