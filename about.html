@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<!-- <meta name="viewport" content="width=device-width"> -->
+		<title>About</title> 
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
+	</head>
+	<body>
+            <h1>About the Nobel Prize Gender Distribution Data Visualization</h1>
+            <h3>A description of the project and the intended experience</h3>
+
+            This is an interactive data visualization of the gender distribution of Nobel prize winners in different categories. It is intended to illustrate the very apparent gender gap in the people who are awarded Nobel prizes across categories. 
+            
+            The experience should allow the user to get to the page, read the one line of instructions, and click on a category that they are interested in viewing the gender distribution for. The data visualization then appears and the user can click on individual Nobel prize medals to learn about who the winner was. 
+            
+            <h3>Your motivation and process for creating it</h3>
+            
+            My motivation for creating this project came from finding out that it was only very recently the second woman won the Nobel prize. I wanted to explore whether this was a problem unique to Physics, or whether other Nobel prize categories faced a similar gender imbalance.
+            
+            I decided to use p5 because I thought that the idea would lend itself well to object-oriented programming and the interactions enabled by p5.
+            
+            <h3>Explanation of the design decisions</h3>
+            
+            One of the four affordances of the digital medium that Janet Murray describes in “Inventing the Medium” is the encyclopedic affordance. On a small scale, this project takes a large amount of information and allows it to be segmented and presented in a simple visualization to convey the gender distribution among a large set of people. 
+            
+            The interactivity or agency that is provided to the user by the design is through the exploration of the data. At a high level, what is offered to the user is the gender distribution presented by the grid of Nobel medals. After that, it is up to the user to explore the data by clicking on the medals. The user may choose to start by looking at the red medals, which represent female winners because the red medals stand out as being fewer and a contrasting color to green medals, which represent male winners.  
+            
+            I decided to use the Wikipedia API to obtain the thumbnail image from each Nobel prize winner’s Wikipedia page. I decided to use this method instead of using a more broad image search API (such as the Flickr API) because I anticipated that I would get better results.
+            
+            <h3>Major challenges you faced</h3>
+            
+            The data has some special characters in it that sometimes causes the Wikipedia API search to not return a result. For the time being, I put a placeholder Nobel medal for any image that does not load. 
+            
+            Secondly, the Wikipedia API makes an HTTP request instead of an HTTPS request. I was able to solve that challenge by rerouting the API call through the CORS Anywhere API tool (linked below). 
+            
+            Placing the medals in a grid proved to be a little more challenging than anticipated, considering that each category of Nobel prize has different numbers of winners. 
+            
+            <h3>Possible next steps</h3>
+            
+            I would like to change the experience from clicking on the medal and viewing further information on the side to hovering over each medal and having a popup box with information. 
+            
+            Additionally, I could choose to represent this information in another way by presenting the gender distribution over time in a timeline. I also need to get the most up to date Nobel prize winner data. 
+
+            <h3>Links to any data sources, references, or code resources that you used</h3>
+
+            <ul>
+            <li>Inventing the Medium by Janet Murray, Chapter 2 
+            https://github.com/craigprotzel/Mashups/blob/master/_Readings/JanetMurray_InventingTheMedium_Ch2.pdf</li>
+            
+            <li>Wikipedia API https://en.wikipedia.org/w/api.php</li>
+            
+            <li>CORS Anywhere API https://cors-anywhere.herokuapp.com/</li>
+            
+            <li>Nobel Prize Data 1901 - 2016 https://data.world/sya/nobel-prize-winners</li>
+            </ul>
+            
+            
+
+		<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+		<script type="text/javascript" src="scripts.js"></script>
+	</body>
+</html>
